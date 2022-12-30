@@ -28,6 +28,16 @@ async function run(){
       res.send(result);
       console.log(posts);
     });
+
+
+
+    app.get('/posts', async (req, res) => {
+      const quary = {};
+      const result = await fbpostCollection.find(quary);
+      res.send(result);
+      console.log(posts);
+    });
+    
   }
   finally {
   }
